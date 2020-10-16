@@ -1,1 +1,19 @@
-<p>parte5 works!</p>
+<button [type]="submit" [disabled]="desactivado">Presiona</button>
+<button (click)="desactivado =! desactivado">Cambiar Estado</button>
+<br><br>
+<input type="text" [(ngModel)]="titulo" (ngModelChange)="logg($event)">
+<h3>Tu nombre es: {{ titulo }}</h3>
+<br><br>
+<h3>Has Seleccionado: {{ seleccion }}</h3>
+<select [(ngModel)]="seleccion">
+    <option value="Toyota">Toyota</option>
+    <option value="Hyundai">Hyundai</option>
+    <option value="Mercedes">Mercedes</option>
+</select>
+<br><br>
+<h3>Has Seleccionado: {{ seleccion2 }}</h3>
+<select [value]="seleccion2" (change)="seleccion2 = $event.target.value">
+    <option value="Toyota">Toyota</option>
+    <option value="Hyundai">Hyundai</option>
+    <option value="Mercedes">Mercedes</option>
+</select>

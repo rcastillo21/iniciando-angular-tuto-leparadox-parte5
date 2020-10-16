@@ -12,4 +12,13 @@ export class Parte5Component implements OnInit {
   ngOnInit(): void {
   }
 
+  desactivado: boolean = false;
+
+  titulo: string = '';
+
+  logg(titulo){
+    console.log(titulo);
+  }
+
+  seleccion2: string = 'Toyota';
 }
